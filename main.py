@@ -10,7 +10,7 @@ Bootstrap(app)
 @app.route("/")
 def home():
     form = SignForm()
-    return render_template("index.html", form=form)
+    return render_template("index.html")
 
 
 if __name__ == "__main__":
