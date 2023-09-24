@@ -1,0 +1,37 @@
+{% include "header.html" %}
+
+<div class="box">
+    {% include "flash_messages.html" %}
+    <h1>Check in</h1>
+    <form action={{url_for('check_in')}} method='post'>
+        {% for name in name_list%}
+
+        <div class="border">
+
+            <input type="checkbox" id={{loop.index}} name={{name}} value="1" class="center">
+
+            <label for={{loop.index}}>{{name}}</label>
+        </div>
+        {% endfor%}
+        <div class="space-above">
+            <input type="text" id="location" name="location" placeholder="Location" required maxlength="50">
+        </div>
+        <div class="space-above">
+            <input type="text" id="others" name="others" placeholder="Other, if others with ',' " required
+                   maxlength="100">
+        </div>
+
+        <div class="center">
+            <input type="submit" class="btn btn-primary space-above">
+        </div>
+
+    </form>
+
+
+</div>
+
+
+<!--</div>-->
+
+{% include "footer.html" %}
+

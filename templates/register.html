@@ -1,9 +1,9 @@
-{% include "header.html"%}
+{% include "header.html" %}
 
 <div class="box">
     {% include "flash_messages.html" %}
-    <h1 class="center">{{greeting}}</h1>
-    <form action={{url_for('home')}} method='post'>
+    <h1 class="center">Register</h1>
+    <form action={{url_for('register')}} method='post'>
         <div class="login-grid">
             <div class="space-above">
                 <label for="username">
@@ -19,7 +19,7 @@
                 <label for="password">
                     Password:
                 </label>
-            </div>
+                </div>
             <div class="space-above">
                 <input type="password" id="password" name="password" placeholder="Please enter your password." required
                        maxlength="50">
@@ -27,14 +27,13 @@
             </div>
         </div>
 
-        <div class="center">
-            <input type="submit" class="btn btn-primary space-above">
-        </div>
+            <div class="center">
+                <input type="submit" class="btn btn-primary space-above">
+            </div>
 
     </form>
 
 
 </div>
-
 
 {% include "footer.html"%}
