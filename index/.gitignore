@@ -2,7 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=flask
 
 ### Flask ###
-instance/*
+instance/checkin.db
 !instance/.gitignore
 .webassets-cache
 .env
