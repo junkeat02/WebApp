@@ -6,7 +6,6 @@ from flask_login import login_required, LoginManager, current_user, login_user, 
 
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime
-import time
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
