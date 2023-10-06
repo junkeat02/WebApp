@@ -1,5 +1,14 @@
 /* This CSS file will need to be added to the styling of 
 your web pages for the styles to be rendered. */
+body{
+    background-color: black;
+}
+
+#mainNav {
+  position: absolute;
+  border-bottom: 1px solid #e9ecef;
+  background-color: white;
+}
 
 form {
     font-size: 150%;
@@ -37,11 +46,6 @@ form {
     form{
         font-size: 100%;
     }
-    .check-box{
-        background-color: blue;
-    }
-
-
 }
 
 .center{
@@ -85,9 +89,7 @@ footer i{
     footer p{
         font-size: 0.8rem;
     }
-    h1 {
-        font-size: 0.3rem;
-    }
 }
+
 
 

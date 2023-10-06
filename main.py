@@ -28,6 +28,7 @@ class User(UserMixin, db.Model):
     password = db.Column(db.String(250), nullable=True)
     check_list = relationship("CheckList", back_populates="user")
 
+
 class CheckList(db.Model):
     __tablename__ = "Check_in_list"
     id = db.Column(db.Integer, primary_key=True)
@@ -145,6 +146,25 @@ def check_in():
         # print(new_data_dict)
         return redirect(url_for("check_in"))
     return render_template("check_in.html", name_list=PASSENGERS)
+
+
+@app.route("/logout")
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for("home"))
+
+
+@app.route("/about")
+def about():
+    logout_user()
+    return redirect(url_for("home"))
+
+
+@app.route("/contact")
+def contact():
+    logout_user()
+    return redirect(url_for("home"))
 
 
 if __name__ == "__main__":

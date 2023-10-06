@@ -1,38 +1,42 @@
 {% include "header.html"%}
 
-<div class="box">
-    {% include "flash_messages.html" %}
-    <h1 class="center">{{greeting}}</h1>
-    <form action={{url_for('home')}} method='post'>
-        <div class="login-grid">
-            <div class="space-above">
-                <label for="username">
-                    Name:
-                </label>
+<div class="container-fluid space-above">
+    <div class="box">
+        {% include "flash_messages.html" %}
+        <h1 class="center">{{greeting}}</h1>
+        <form action={{url_for('home')}} method='post'>
+            <div class="login-grid">
+                <div class="space-above">
+                    <label for="username">
+                        Name:
+                    </label>
+                </div>
+                <div class="space-above">
+                    <input type="text" id="username" name="username" placeholder="Your name or nickname" required
+                           maxlength="100">
+                </div>
+
+                <div class="space-above">
+                    <label for="password">
+                        Password:
+                    </label>
+                </div>
+                <div class="space-above">
+                    <input type="password" id="password" name="password" placeholder="Please enter your password."
+                           required
+                           maxlength="50">
+
+                </div>
             </div>
-            <div class="space-above">
-                <input type="text" id="username" name="username" placeholder="Your name or nickname" required
-                       maxlength="100">
+
+            <div class="center">
+                <input type="submit" class="btn btn-primary space-above">
             </div>
 
-            <div class="space-above">
-                <label for="password">
-                    Password:
-                </label>
-            </div>
-            <div class="space-above">
-                <input type="password" id="password" name="password" placeholder="Please enter your password." required
-                       maxlength="50">
+        </form>
 
-            </div>
-        </div>
 
-        <div class="center">
-            <input type="submit" class="btn btn-primary space-above">
-        </div>
-
-    </form>
-
+    </div>
 
 </div>
 
